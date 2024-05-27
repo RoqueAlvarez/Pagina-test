@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agenda de contactos</title>
+</head>
+<body>
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  background-color: #717374; /* Cambiar el fondo de pantalla a gris */
+  color: #000; /* Cambiar el color de las letras a negro */
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.container {
+  width: 100%;
+  padding: 20px;
+}
+h1 {
+  text-align: center;
+  color: #fff;
+}
+form {
+  text-align: center;
+}
+input[type="text"], input[type="email"], input[type="tel"], input[type="submit"] {
+  width: calc(100% - 20px); 
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  background-color: #fff; /* Cambiar el fondo de los inputs a blanco */
+  color: #000; /* Cambiar el color de las letras a negro */
+  border-radius: 4px; 
+  box-sizing: border-box; 
+}
+
+input[type="submit"] {
+  width: 100%; 
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.contacto {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  background-color: #ffffff; /* Color de fondo para los contactos */
+  padding: 10px; /* Añadir un poco de espacio interno para separar los elementos */
+  border-radius: 4px; /* Agregar bordes redondeados */
+}
+
+.contacto p {
+  margin: 0;
+  margin-right: 10px;
+}
+.contacto > div {
+  display: flex;
+}
+
+.botones {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+
+
+.btn-editar,
+.btn-eliminar {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-editar {
+  margin-right: 5px;
+}
+.btn-eliminar {
+  margin-left: 5px;
+}
+  </style>
+  <div class="container">
+    <h1>AGENDA</h1>
+    <form id="contactForm">
+      <input type="text" id="firstName" placeholder="Nombre">
+      <input type="text" id="lastName" placeholder="Apellido">
+      <input type="tel" id="phoneNumber" placeholder="Teléfono (10 dígitos)">
+      <input type="email" id="email" placeholder="Correo electrónico">
+      <input type="submit" value="Agregar contacto">
+    </form>
+    <div class="contact-info" id="contactInfo"></div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
